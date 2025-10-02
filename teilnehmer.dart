@@ -1,12 +1,9 @@
-///Erstellt eine Participant klasse mit diversen Attributen
-class Participant {
-  final String name;
-  final String firstName;
-  final int age;
-  final int? mobileNumber;
-  final int? telephoneNumber;
+// ignore_for_file: avoid_equals_and_hash_code_on_mutable_classes
 
-///Erstellt eine Participant klasse mit diversen Attributen
+import 'dart:developer' show log;
+
+//Erstellt eine Participant Klasse mit diversen Attributen.
+class Participant {
   Participant({
     required this.name,
     required this.firstName,
@@ -15,12 +12,25 @@ class Participant {
     this.telephoneNumber,
   });
 
-  ///
+  void dosmth() {
+    log("hallo");
+  }
+
+  final String name;
+  final String firstName;
+  final int age;
+  final int? mobileNumber;
+  final int? telephoneNumber;
+
+  ///asd
   @override
-  /// der [==] soll Objekte miteinander vergleichen können
+  // der [==] soll Objekte miteinander vergleichen können
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
     return other is Participant &&
+        other.name == name &&
+        other.firstName == firstName &&
+        other.age == age &&
         other.mobileNumber == mobileNumber &&
         other.telephoneNumber == telephoneNumber;
   }
@@ -29,26 +39,19 @@ class Participant {
   int get hashCode => Object.hash(mobileNumber, telephoneNumber);
 
   Participant copyWith({
-    Function()? mobileNumber,
-    Function()? telephoneNumber,
+    String Function()? name,
+    String Function()? firstName,
+    int Function()? age,
+    int? Function()? mobileNumber,
+    int? Function()? telephoneNumber,
   }) {
     return Participant(
-      name: name,
-      firstName: firstName,
-      age: age,
+      name: name != null ? name() : this.name,
+      firstName: firstName != null ? firstName() : this.firstName,
+      age: age != null ? age() : this.age,
       mobileNumber: mobileNumber != null ? mobileNumber() : this.mobileNumber,
       telephoneNumber:
           telephoneNumber != null ? telephoneNumber() : this.telephoneNumber,
     );
   }
-}
-
-void main() {
-  final p1 = Participant(name: 'Kai', firstName: 'Aik', age: 21);
-
-  final p2 = p1.copyWith(mobileNumber: () => 100);
-  final p3 = p2.copyWith(mobileNumber: () => null);
-  print(p1 == p2);
-  print(p2 == p3);
-  print(p1 == p3);
 }

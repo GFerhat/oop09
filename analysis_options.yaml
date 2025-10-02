@@ -1,5 +1,5 @@
-include: package:lints/recommended.yaml
+include: package:very_good_analysis/analysis_options.yaml
 
 linter:
   rules:
-    public_member_api_docs: true
+    prefer_single_quotes: true

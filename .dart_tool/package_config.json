@@ -8,6 +8,12 @@
       "languageVersion": "3.8"
     },
     {
+      "name": "very_good_analysis",
+      "rootUri": "file:///C:/Users/FerhatGumus/AppData/Local/Pub/Cache/hosted/pub.dev/very_good_analysis-10.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.9"
+    },
+    {
       "name": "dart_exercise",
       "rootUri": "../",
       "packageUri": "lib/",
