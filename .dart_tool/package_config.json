@@ -1,0 +1,22 @@
+{
+  "configVersion": 2,
+  "packages": [
+    {
+      "name": "lints",
+      "rootUri": "file:///C:/Users/FerhatGumus/AppData/Local/Pub/Cache/hosted/pub.dev/lints-6.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.8"
+    },
+    {
+      "name": "dart_exercise",
+      "rootUri": "../",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    }
+  ],
+  "generator": "pub",
+  "generatorVersion": "3.9.0",
+  "flutterRoot": "file:///C:/flutter_windows_3.35.1-stable/flutter",
+  "flutterVersion": "3.35.1",
+  "pubCache": "file:///C:/Users/FerhatGumus/AppData/Local/Pub/Cache"
+}
