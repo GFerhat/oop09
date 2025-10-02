@@ -1,5 +1,3 @@
-import 'dart:math';
-
 class Participant {
   final String name;
   final String firstName;
